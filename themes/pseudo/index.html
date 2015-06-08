@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Pseudo</title>
+		<style media="screen">
+			body {
+				background-color: #ddd;
+			}
+			.button {
+				background: #aa0033;
+				border: 0;
+				padding: 10px 20px;
+				color: #fff;
+				font-size: 18px;
+			}
+			.button:hover {
+				background: #ff6600;
+			}
+			.intro {
+				position: relative;
+			}
+			.intro::first-line {
+				background: #ffcc22;
+			}
+			.intro::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(255,255,255,.5);
+			}
+			.intro:hover::after {
+				background-color: transparent;
+			}
+			li {
+				padding: 10px 0;
+				border-top: 2px solid #000;
+			}
+			li:first-child {
+				border-top: 0
+			}
+			input {
+				border: 1px solid #ccc;
+				padding: 5px;
+			}
+			input[type="text"]:focus {
+				outline: 0;
+				border-color: #ff00cc;
+				box-shadow: 0 0 15px #ff00cc;
+			}
+			input[type="checkbox"]:checked + label {
+				color: #ff00cc;
+			}
+		</style>
+	</head>
+	<body>
+		<button class="button">Click me</button>
+		<p class="intro">
+			Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+		</p>
+		<ul>
+			<li>Maecenas faucibus</li>
+			<li>mollis interdum</li>
+			<li>Cras justo odio</li>
+			<li>dapibus ac facilisis</li>
+			<li>egestas eget quam</li>
+			<li>Maecenas sed diam</li>
+		</ul>
+		<form action="#">
+			<p>
+				<label for="name">Name:</label><br>
+				<input type="text" id="name" name="name">
+			</p>
+			<p>
+				<input type="checkbox" id="subscribe" name="subscribe">
+				<label for="subscribe">subscribe</label>
+			</p>
+		</form>
+	</body>
+</html>
